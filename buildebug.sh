@@ -74,7 +74,7 @@ cp -rp ./anykernel/* tmp
 cd tmp
 7za a -mx9 tmp.zip *
 cp $KERNEL_DIR/prebuilts/ramdisk.img .
-python mkbootimg.py \
+python $KERNEL_DIR/mkbootimg.py \
     --header_version 3 \
     --os_version 11.0.0 \
     --os_patch_level 2021-02-00 \
