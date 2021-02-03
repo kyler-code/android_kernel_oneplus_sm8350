@@ -156,3 +156,11 @@ arch/*/configs/vendor/*_defconfig
 #include/linux/oem
 #techpack/
 #opslalib/slalib
+
+# Build script garbage
+kernel.log
+*.zip
+tmp
+
+# Output dir
+out
