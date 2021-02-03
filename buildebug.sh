@@ -72,10 +72,24 @@ mkdir -p tmp
 cp -fp $ZIMAGE_DIR/Image tmp
 cp -rp ./anykernel/* tmp
 cd tmp
-7za a -mx9 $TIME-tmp.zip *
+7za a -mx9 tmp.zip *
+cp $KERNEL_DIR/prebuilts/ramdisk.img .
+python mkbootimg.py \
+    --header_version 3 \
+    --os_version 11.0.0 \
+    --os_patch_level 2021-02-00 \
+    --ramdisk ramdisk.img \
+    --kernel Image \
+    --kernel_offset 0x8000 \
+    --ramdisk_offset 0x1000000 \
+    --tags_offset 0x100 \
+    --pagesize 4096 \
+    --output kernel.img
 cd ..
 rm DynamIQ*.zip
-cp -fp tmp/$TIME-tmp.zip DynamIQ-Kernel-Mi11-$TIME.zip
+rm kernel-*.img
+cp -fp tmp/tmp.zip DynamIQ-Kernel-Mi11-$TIME.zip
+cp -fp tmp/kernel.img kernel-$TIME.img
 rm -rf tmp
 chown -R nakixii *
 chgrp -R nakixii *
