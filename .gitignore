@@ -160,6 +160,7 @@ arch/*/configs/vendor/*_defconfig
 # Build script garbage
 kernel.log
 *.zip
+*.img
 tmp
 
 # Output dir
