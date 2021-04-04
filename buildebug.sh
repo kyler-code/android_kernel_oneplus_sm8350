@@ -47,19 +47,19 @@ ls -a $ZIMAGE_DIR
 cd $KERNEL_DIR
 if grep -q "error: " kernel.log
 then
-	echo; echo; grep -n "error: " kernel.log; echo "\n\n"
+	echo; echo; grep -n "error: " kernel.log; echo; echo
 	chown -R nakixii *
 	chgrp -R nakixii *
 	exit 0
 elif grep -q "undefined reference to" kernel.log
 then
-	echo; echo; grep -n "undefined reference to" kernel.log; echo "\n\n"
+	echo; echo; grep -n "undefined reference to" kernel.log; echo; echo
 	chown -R nakixii *
 	chgrp -R nakixii *
 	exit 0
 elif grep -q "undefined symbol" kernel.log
 then
-	echo; echo; grep -n "undefined symbol" kernel.log; echo "\n\n"
+	echo; echo; grep -n "undefined symbol" kernel.log; echo; echo
 	chown -R nakixii *
 	chgrp -R nakixii *
 	exit 0
