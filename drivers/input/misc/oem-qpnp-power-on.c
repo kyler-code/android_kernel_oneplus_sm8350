@@ -1,0 +1,1 @@
+../../../techpack/oneplus/overlay/oem-qpnp-power-on.c
