@@ -18,7 +18,7 @@
 #include <linux/syscore_ops.h>
 #include <linux/uaccess.h>
 #include <linux/delay.h>
-#if IS_ENABLED(TECHPACK_ONEPLUS)
+#if IS_ENABLED(CONFIG_TECHPACK_ONEPLUS)
 #include <linux/oem/oem_force_dump.h>
 #endif
 

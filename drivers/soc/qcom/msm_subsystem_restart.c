@@ -31,7 +31,7 @@
 #include <linux/of.h>
 #include <asm/current.h>
 #include <linux/timer.h>
-#if IS_ENABLED(TECHPACK_ONEPLUS)
+#if IS_ENABLED(CONFIG_TECHPACK_ONEPLUS)
 #include <linux/oem/boot_mode.h>
 #include <linux/oem/op_misc.h>
 #endif
@@ -1705,7 +1705,7 @@ static int __init subsys_restart_init(void)
 	ret = atomic_notifier_chain_register(&panic_notifier_list, &panic_nb);
 	if (ret)
 		goto err_soc;
-#if IS_ENABLED(TECHPACK_ONEPLUS)
+#if IS_ENABLED(CONFIG_TECHPACK_ONEPLUS)
 	oem_restart_modem_init();
 #endif
 	return 0;
@@ -1729,7 +1729,7 @@ static void __exit subsys_restart_exit(void)
 }
 module_exit(subsys_restart_exit);
 
-#if IS_ENABLED(TECHPACK_ONEPLUS)
+#if IS_ENABLED(CONFIG_TECHPACK_ONEPLUS)
 #include "oem_subsystem_restart.c"
 #endif
 

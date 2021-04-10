@@ -28,7 +28,7 @@
 #include <soc/qcom/watchdog.h>
 #include <soc/qcom/minidump.h>
 
-#if IS_ENABLED(TECHPACK_ONEPLUS)
+#if IS_ENABLED(CONFIG_TECHPACK_ONEPLUS)
 #include <linux/oem/op_misc.h>
 #endif
 
@@ -476,7 +476,7 @@ static void msm_restart_prepare(const char *cmd)
 		} else if (!strncmp(cmd, "edl", 3)) {
 			enable_emergency_dload_mode();
 		} else {
-#if IS_ENABLED(TECHPACK_ONEPLUS)
+#if IS_ENABLED(CONFIG_TECHPACK_ONEPLUS)
 			oem_msm_restart_prepare(cmd, &reason);
 #endif
 		}
@@ -627,7 +627,7 @@ static __exit void msm_restart_exit(void)
 }
 module_exit(msm_restart_exit);
 
-#if IS_ENABLED(TECHPACK_ONEPLUS)
+#if IS_ENABLED(CONFIG_TECHPACK_ONEPLUS)
 #include "oem_msm_poweroff.c"
 #endif
 
