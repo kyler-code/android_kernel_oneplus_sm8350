@@ -2327,4 +2327,156 @@ config ARCH_HAS_SYNC_CORE_BEFORE_USERMODE
 config ARCH_HAS_SYSCALL_WRAPPER
 	def_bool n
 
+config DEFRAG
+	bool
+	default y
+
+config FSC
+	bool
+	default y
+
+config OPCHAIN
+	bool
+	default y
+
+config HOUSTON
+	bool
+	default y
+
+config CONTROL_CENTER
+	bool
+	default y
+
+config IM
+	bool
+	default y
+
+config TPD
+	bool
+	default y
+
+config OPLUS_FEATURE_SUGOV_TL
+	bool
+	default y
+
+config PCCORE
+	bool
+	default y
+
+config ZRAM_WRITEBACK
+	bool
+	default y
+
+config ZWB_HANDLE
+	bool
+	default y
+
+config VM_FRAGMENT_MONITOR
+	bool
+	default y
+
+config GLOOM_VA_FEATURE
+	bool
+	default y
+
+config OP_FREEZER
+	bool
+	default y
+
+config UXCHAIN
+	bool
+	default y
+
+config UXCHAIN_V2
+	bool
+	default y
+
+config TPP
+	bool
+	default y
+
+config MEMEX_STANDALONE
+	bool
+	default y
+
+config PANIC_FLUSH
+	bool
+	default y
+
+config DIRECT_SWAPPINESS
+	bool
+	default y
+
+config F2FS_OF2FS
+	bool
+	default y
+
+config F2FS_BD_STAT
+	bool
+	default y
+
+config SF_BOOST
+	bool
+	default y
+
+config CLK_LIST_SHOW
+	bool
+	default y
+
+config BG_FREEZER
+	bool
+	default y
+
+config ONEPLUS_FG_OPT
+	bool
+	default y
+
+config ONEPLUS_THERM_OPT
+	bool
+	default y
+
+config ONEPLUS_MEM_MONITOR
+	bool
+	default y
+
+config ONEPLUS_HEALTHINFO
+	bool
+	default y
+
+config KEY_FLUSH
+	bool
+	default y
+
+config ONEPLUS_TASKLOAD_INFO
+	bool
+	default y
+
+config DUMP_REASON
+	bool
+	default y
+
+config OEM_FORCE_DUMP
+	bool
+	default y
+
+config HUNG_TASK_ENHANCE
+	bool
+	default y
+
+config OEM_BOOT_MODE
+	bool
+	default y
+
+config FUSE_DECOUPLING
+	bool
+	default y
+
+config CPUFREQ_BOUNCING
+	bool
+	default y
+
+config TECHPACK_ONEPLUS
+	bool
+	default y
+
 source "init/Kconfig.gki"
