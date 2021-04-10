@@ -1275,7 +1275,7 @@ static struct module_attribute *modinfo_attrs[] = {
 
 static const char vermagic[] = VERMAGIC_STRING;
 
-static int try_to_force_load(struct module *mod, const char *reason)
+/* static int try_to_force_load(struct module *mod, const char *reason)
 {
 #ifdef CONFIG_MODULE_FORCE_LOAD
 	if (!test_taint(TAINT_FORCED_MODULE))
@@ -1285,7 +1285,7 @@ static int try_to_force_load(struct module *mod, const char *reason)
 #else
 	return -ENOEXEC;
 #endif
-}
+} */
 
 #ifdef CONFIG_MODVERSIONS
 
