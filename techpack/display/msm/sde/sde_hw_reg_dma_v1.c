@@ -570,7 +570,7 @@ static int validate_kick_off_v1(struct sde_reg_dma_kickoff_cfg *cfg)
 		return -EOPNOTSUPP;
 	}
 
-	if (cfg->ctl->idx < CTL_0 && cfg->ctl->idx >= CTL_MAX) {
+	if (cfg->ctl->idx < CTL_0 || cfg->ctl->idx >= CTL_MAX) {
 		DRM_ERROR("invalid ctl idx %d\n", cfg->ctl->idx);
 		return -EINVAL;
 	}
@@ -874,7 +874,7 @@ static int check_support_v1(enum sde_reg_dma_features feature,
 	if (!is_supported)
 		return -EINVAL;
 
-	if (feature >= REG_DMA_FEATURES_MAX || blk >= BIT(REG_DMA_BLK_MAX)) {
+	if (feature >= REG_DMA_FEATURES_MAX) {
 		*is_supported = false;
 		return ret;
 	}

@@ -504,9 +504,5 @@ int msm_cvp_map_ipcc_regs(u32 *iova)
 		return -EINVAL;
 	}
 	*iova = dma_map_resource(cb->dev, paddr, size, DMA_BIDIRECTIONAL, 0);
-	if (*iova == DMA_MAPPING_ERROR) {
-		dprintk(CVP_WARN, "%s: fail to map IPCC regs\n", __func__);
-		return -EFAULT;
-	}
 	return 0;
 }
