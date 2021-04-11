@@ -2517,7 +2517,7 @@ static ssize_t _sde_debugfs_conn_cmd_rx_write(struct file *file,
 		token = strsep(&input_copy, delim);
 	}
 
-	if (!buffer[0] || buffer[0] > MAX_CMD_RECEIVE_SIZE) {
+	if (!buffer[0]) {
 		SDE_ERROR("invalid rx length\n");
 		rc = -EFAULT;
 		goto end1;

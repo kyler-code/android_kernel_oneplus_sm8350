@@ -1437,11 +1437,7 @@ static ssize_t register_write_store(struct kobject *kobj,
   if ((numparams >= 3) && (pmask < 0 || pmask > 0xff))
     return -EINVAL;
 
-  if (pmask == -1) {
-    rc = tof_i2c_write(chip->client, preg, &pval, 1);
-  } else {
-    rc = tof_i2c_write_mask(chip->client, preg, &pval, pmask);
-  }
+  rc = tof_i2c_write_mask(chip->client, preg, &pval, pmask);
 
   return rc ? rc : count;
 }
