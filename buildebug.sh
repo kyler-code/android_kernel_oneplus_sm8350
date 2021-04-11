@@ -9,7 +9,7 @@ export CLANG_TRIPLE=aarch64-linux-gnu-
 export CROSS_COMPILE=/home/nakixii/toolchain/bin/aarch64-linux-gnu- CC=clang CXX=clang++
 export CROSS_COMPILE_COMPAT=/home/nakixii/toolchain/arm-eabi-gcc/bin/arm-eabi-
 
-DEFCONFIG="venus_defconfig"
+DEFCONFIG="lemonade_defconfig"
 
 # Paths
 KERNEL_DIR=`pwd`
@@ -88,7 +88,7 @@ python $KERNEL_DIR/mkbootimg.py \
 cd ..
 rm DynamIQ*.zip
 rm kernel-*.img
-cp -fp tmp/tmp.zip DynamIQ-Kernel-Mi11-$TIME.zip
+cp -fp tmp/tmp.zip DynamIQ-Kernel-OP9Pro-$TIME.zip
 cp -fp tmp/kernel.img kernel-$TIME.img
 rm -rf tmp
 chown -R nakixii *
