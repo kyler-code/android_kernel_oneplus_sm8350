@@ -77,7 +77,7 @@ cp $KERNEL_DIR/prebuilts/ramdisk.img .
 python $KERNEL_DIR/mkbootimg.py \
     --header_version 3 \
     --os_version 11.0.0 \
-    --os_patch_level 2021-02-00 \
+    --os_patch_level 2021-03-00 \
     --ramdisk ramdisk.img \
     --kernel Image \
     --kernel_offset 0x8000 \
