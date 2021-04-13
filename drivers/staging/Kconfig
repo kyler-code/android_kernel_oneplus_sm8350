@@ -119,8 +119,11 @@ source "drivers/staging/kpc2000/Kconfig"
 source "drivers/staging/isdn/Kconfig"
 
 source "drivers/staging/wusbcore/Kconfig"
+
 source "drivers/staging/uwb/Kconfig"
 
 source "drivers/staging/qlge/Kconfig"
+
+source "drivers/staging/qcacld-3.0/Kconfig"
 
 endif # STAGING
